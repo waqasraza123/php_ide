@@ -3,10 +3,10 @@
 @section('content')
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-4 col-md-offset-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">Register</div>
-				<div class="panel-body">
+				<div class="panel-heading form-top">Register</div>
+				<div class="panel-body" style="padding: 40px;">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
 							<strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -22,39 +22,32 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Name</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('name') }}">
-							</div>
+							<input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Name">
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
+							<input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-Mail Address">
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
+							<input type="password" class="form-control" name="password" placeholder="Password">
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Confirm Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password_confirmation">
-							</div>
+							<input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
 						</div>
 
 						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Register
-								</button>
-							</div>
+                            <div class="role">
+                                <label for="role">Moderator</label>
+                                <input type="checkbox" value="1" class="" name="role">
+                            </div>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">
+								Register
+							</button>
 						</div>
 					</form>
 				</div>

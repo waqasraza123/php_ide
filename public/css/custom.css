@@ -1,0 +1,49 @@
+.form-top {
+    overflow: hidden !important;
+    padding: 25px !important;
+    background: #31708f !important;
+    -moz-border-radius: 4px 4px 0 0 !important;
+    -webkit-border-radius: 4px 4px 0 0 !important;
+    border-radius: 4px 4px 0 0 !important;
+    text-align: center !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: white !important;
+    color: #888;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+.content-wrapper{
+    width: 100%;
+}
+
+.output-outer, .code-outer{
+    width: 80%;
+    margin: 2% auto;
+}
+
+.output {
+    border: 1px solid #89BFEA;
+    border-radius: 3px;
+    color: darkred !important;
+    font-weight: 900;
+    height: 412px;
+    background-color: #bdc3c7;
+}
+
+.output-outer > h2, .code-outer > h2{
+    text-align: center;
+}
+.navbar-default {
+    background-color: #1abc9c;
+    border-radius: 0px;
+}
+nav.navbar.navbar-default a{
+    color: white;
+}
+#sf-resetcontent {
+    width: auto !important;
+    margin: 0 auto;
+}

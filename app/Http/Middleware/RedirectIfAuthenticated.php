@@ -35,7 +35,14 @@ class RedirectIfAuthenticated {
 	{
 		if ($this->auth->check())
 		{
-			return new RedirectResponse(url('/home'));
+			if($this->auth->user()->moderator == 0){
+				return new RedirectResponse(url('ide'));
+			}
+
+			//user is moderator
+			if($this->auth->user()->moderator == 1){
+				return new RedirectResponse(url('codes'));
+			}
 		}
 
 		return $next($request);

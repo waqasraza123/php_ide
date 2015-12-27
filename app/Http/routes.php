@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function(){
+    if(\Illuminate\Support\Facades\Auth::check()){
+        return view('home');
+    }
+	return view('auth.register');
+});
 
 Route::get('home', 'HomeController@index');
 
@@ -20,6 +25,10 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('test', function(){
+Route::get('ide', 'IdeController@showIde');
 
-});
+//save code
+Route::post('ide', 'IdeController@handle');
+
+//show codes by all users
+Route::get('codes', 'CodeController@index');

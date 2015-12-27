@@ -8,7 +8,8 @@
 				<div class="panel-heading">Home</div>
 
 				<div class="panel-body">
-					You are logged in!
+					<a href="{{url('codes')}}"><button class="btn btn-primary">View User Codes</button></a>
+					<a href="{{url('ide')}}"><button class="btn btn-primary">Go to PhP IDE</button></a>
 				</div>
 			</div>
 		</div>
